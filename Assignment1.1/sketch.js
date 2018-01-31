@@ -12,6 +12,7 @@ function setup() {
 
 //Cloud
 	fill(255);
+	ellipse(500, 300, 50, 50);
 	ellipse(520, 320, 50, 50);
 	ellipse(470, 300, 50, 50);
 	ellipse(485, 320, 50, 50);

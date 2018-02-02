@@ -1,0 +1,57 @@
+<html>
+
+	<head>
+
+		<!-- 
+		ARTG2260
+		Louis Dechamps
+		louis.dechamps99@gmail.com
+		Exercise 3
+		 -->
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+
+	
+		<script>
+			var xPos;																	// declare variables xPos and yPos
+			var yPos;																	// declare a var called xSpeed;
+			var xSpeed = 1;																// declare a var called ySpeed
+			var ySpeed = 1;																// declare a variable called img 
+			var imgwidth = 64;															// declare a var for image width, assign 40 
+			var imgheight = 64;															// declare a var for image height, assign 30
+
+			function preload() {														// use the preload()function to load an image, 
+				img = loadImage('assets/sun-with-face.png');							// format: img = loadImage('assets/imageName.png');
+					}																	// you'll need to create a folder called assets, and include the png there
+
+			function setup() {
+				createCanvas(400, 400)													// create a canvas at least 400 x 400
+				xPos = width/2;															// set xPos to be half of the width 
+				yPos = height/2; 														// set yPos to be half of the height
+
+				xSpeed = random (1, 10);												// assign xSpeed and ySpeed 
+				ySpeed = random(1, 10); 												// with random values between 1 and 10
+			}
+
+			function draw(){
+				background(0);                 											// set the background to black
+
+				image(img, xPos, yPos, 64, 64);											// draw the image at the (xPos, yPos) coordinate,
+																						// using the template image(img, xPos, yPos, width, height)
+
+				xPos += xSpeed;															// add the xSpeed to xPos
+				yPos += ySpeed;															// add the ySpeed to yPos
+
+				if (xPos + 32 >= width || xPos - 32 <= 0){								// if we reach the edge of the canvas
+				 xSpeed *= -1															// turn around (toggle xSpeed negative to positive)
+			    }
+				if (yPos + 32 >= height || yPos - 32 <= 0){
+			      ySpeed *= -1;															// same as above, toggle ySpeed if we hit the top or bottom
+			    }
+			    }
+		</script>
+
+	</head>
+
+</html>
+

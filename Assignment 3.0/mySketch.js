@@ -9,12 +9,12 @@ var vy = new Array(particlesQ);
 
 function setup() {
 	createCanvas(windowWidth, windowHeight);
+	background(255, 255, 255)
 }
 
 
 function draw() {
-	 var bg = map(mouseX, 0, width, 255, 0);
-	background(bg);
+	
 
 	for (var a = 0; a < c; a++) {
 		var ax = 0, ay = 0;
@@ -51,7 +51,7 @@ function draw() {
 
 function addNewParticle() {
 	x[c] = mouseX;
-	y[c] = mouse;
+	y[c] = mouseY;
 	vx[c] = 0;
 	vy[c] = 0;
 

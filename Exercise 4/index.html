@@ -6,11 +6,11 @@
 		ARTG2260
 		Louis Dechamps
 		louis.dechamps99@gmail.com
-		Assignment 1.0
+		Assignment 2.1
 		 -->
 
 
-		 <meta charset="utf-8">
+		<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
@@ -18,8 +18,52 @@
   <link rel="stylesheet" href="styles.css">
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
-		
-		<script src="sketch.js"></script>
+
+		<script>
+
+let b;
+
+function setup() {
+	b = new Box();
+}
+
+function draw() {
+	background(0);
+	b.display();
+	b.move();
+	b.teleport();
+
+}
+
+class Box {
+	constructor(){
+		this.x = 50;
+		this.y = 50;
+		this.side = 10;
+		this.ySpeed = 1;
+		this.c = (255);
+	}
+
+	display(){
+		rect(this.x, this.y, this.side, this.side);
+		fill(this.c)
+
+	}
+
+	move(){
+		this.y += this.ySpeed;
+	}
+
+	teleport(){
+		if (this.y+this.side/2 >= height){
+			this.x = 50;
+			this.y = 0;
+			this.c = (random(255),random(255),random(255));
+		}
+	}
+}
+
+		</script>
 
 	</head>
 

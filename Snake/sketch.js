@@ -42,7 +42,7 @@ function draw() {
   text("Score = " + score, 500, 20);
 
   fill(random(255), random(255), random(255));
-  ellipse(food.x, food.y, scl, scl);
+  rect(food.x, food.y, scl, scl);
 
   
 }

@@ -43,4 +43,9 @@ function keyPressed()
 	{
 		c = color(0, 0, 255)
 	}
+
+	if(key == 'e' || key == 'E')
+	{
+		c = color(255, 255, 255) //White/Eraser
+	}
 }

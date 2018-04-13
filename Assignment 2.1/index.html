@@ -35,7 +35,7 @@ function draw()
 	fill(200);
 	rect(0, 0, width, 25);
 	fill(0);
-	text("Press the 'X, R, B, or G' key on your keyboard to change the color. 'W' to use eraser", 10, 15);
+	text("Press the 'X, R, B, or G' key on your keyboard to change the color. 'E' to use eraser", 10, 15);
 }
  
 function mouseDragged() 
@@ -67,7 +67,7 @@ function keyPressed()
 		c = color(0, 0, 255) //Blue
 	}
 
-	if(key == 'w' || key == 'W')
+	if(key == 'e' || key == 'E')
 	{
 		c = color(255, 255, 255) //White/Eraser
 	}
